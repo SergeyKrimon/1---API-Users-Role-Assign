@@ -1,0 +1,24 @@
+{
+    "request": {
+     "method": "PUT",
+     "url": "/user/4e129846-bc89-4333-84e8-741632d31c31/role",
+     "headers" : {
+       "Authorization" : {
+         "contains" : "Baerer"
+       }
+     },
+     "bodyPatterns":[
+       {
+        "matchesJsonPath":"$.listRoles"
+ 
+       }
+     ]
+     
+   },
+ 
+   "response": {
+     "status": 200,
+     "bodyFileName": "removeuserRole.json"
+   }
+ }
+ 

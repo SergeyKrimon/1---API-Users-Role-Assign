@@ -1,0 +1,16 @@
+{
+    "request": {
+      "method": "GET",
+      "url": "/user",
+       "headers" : {
+        "Authorization" : {
+          "contains" : "Baerer"
+        }
+      }
+    },
+
+    "response": {
+      "status": 200,
+      "bodyFileName": "listusers.json"
+    }
+  }

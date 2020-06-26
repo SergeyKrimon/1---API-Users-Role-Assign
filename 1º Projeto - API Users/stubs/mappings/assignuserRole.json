@@ -1,0 +1,23 @@
+{
+    "request": {
+     "method": "PUT",
+     "url": "/user/13ede395-1d6b-48cd-81bd-9af3ff702bc2/role",
+     "headers" : {
+       "Authorization" : {
+         "contains" : "Baerer"
+       }
+     },
+     "bodyPatterns":[
+      {
+         "matchesJsonPath":"$.listRoles"
+
+      }
+    ]
+
+   },
+ 
+   "response": {
+     "status": 200,
+     "bodyFileName": "assignuserRole.json"
+   }
+ }

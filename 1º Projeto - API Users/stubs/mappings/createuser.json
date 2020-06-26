@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/user",
+    "headers" : {
+      "Authorization" : {
+        "contains" : "Baerer"
+      }
+    },
+    "bodyPatterns":[
+      {
+         "matchesJsonPath":"$.userId",
+         "matchesJsonPath":"$.name",
+         "matchesJsonPath":"$.email",
+         "matchesJsonPath":"$.telephone",
+         "matchesJsonPath":"$.password"
+        }
+         
+   ]
+  
+    },
+    "response": {
+    "status": 200,
+    "bodyFileName": "createuser.json"
+  }
+}
+

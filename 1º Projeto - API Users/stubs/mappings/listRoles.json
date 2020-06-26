@@ -1,0 +1,17 @@
+{
+    "request": {
+      "method": "GET",
+      "url": "/role",
+       "headers" : {
+        "Authorization" : {
+          "contains" : "Baerer"
+        }
+      }
+    },
+
+    "response": {
+      "status": 200,
+      "bodyFileName": "listRoles.json"
+    }
+}
+    
