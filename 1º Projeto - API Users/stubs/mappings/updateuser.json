@@ -1,0 +1,25 @@
+{
+   "request": {
+    "method": "PUT",
+    "url": "/user/c641cc76-f0c5-4125-aa4b-d691a7d9c7ba",
+    "headers" : {
+      "Authorization" : {
+        "contains" : "Baerer"
+      }
+    },
+    "bodyPatterns":[
+      {
+         "matchesJsonPath":"$.name",
+         "matchesJsonPath":"$.email",
+         "matchesJsonPath":"$.telephone"
+
+      }
+    ]
+    
+  },
+
+  "response": {
+    "status": 200,
+    "bodyFileName": "updateuser.json"
+  }
+}

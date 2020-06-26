@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "51a9dde1-9cb1-4667-a179-d6d8db19571c",
+		"name": "Corporate.Axia.Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9cd23e88-e321-4ebb-9312-22c261e2ce06",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Roles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "807f1aef-5e59-4087-ac0d-052821e07682",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f91e3ff0-3dc5-43fc-aef7-11d119b17f97",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  name:\"Role Name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3ac62ab3-a354-47fa-9a58-8247ef653a6a",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Baerer"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\":\"User name\",\n  \"name\":\"User Name\",\n  \"email\":\"User Name\",\n  \"telephone\":\"User Name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d3f8f6a7-d29e-425e-8e23-c597b18e7dfd",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/c641cc76-f0c5-4125-aa4b-d691a7d9c7ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"c641cc76-f0c5-4125-aa4b-d691a7d9c7ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ab90cc3-adff-4d18-b67e-3b9cf444e2c3",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/role/4e129846-bc89-4333-84e8-741632d31c31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"role",
+						"4e129846-bc89-4333-84e8-741632d31c31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ffb409f6-24a6-4ba3-8352-c4a4407e82c7",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/c641cc76-f0c5-4125-aa4b-d691a7d9c7ba/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"c641cc76-f0c5-4125-aa4b-d691a7d9c7ba",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f07b3b26-87a2-40c7-974b-90f344c5c24f",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  roleId:\"Updated\",\n  name:\"Updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/role/4e129846-bc89-4333-84e8-741632d31c31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"role",
+						"4e129846-bc89-4333-84e8-741632d31c31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2e8674c1-dcc6-4b4d-8450-200bc4d07f00",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  name:\"Updated\",\n  email:\"Updated\",\n  telephone:\"Updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/c641cc76-f0c5-4125-aa4b-d691a7d9c7ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"c641cc76-f0c5-4125-aa4b-d691a7d9c7ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users By Role",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8621022-d28c-4b8a-9bc4-f85f25108252",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});00;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/role/263f93c9-570b-4afa-b78b-bd5ff757e763/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"role",
+						"263f93c9-570b-4afa-b78b-bd5ff757e763",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign User Roles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f7630e39-cd69-4420-bdd2-17ac68929a8e",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  listRoles:\"Assign User Role Updated!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/13ede395-1d6b-48cd-81bd-9af3ff702bc2/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"13ede395-1d6b-48cd-81bd-9af3ff702bc2",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User Roles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c350ef4e-5649-46d2-8dc8-ef9a360fd159",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  listRoles:\"User Role Updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/4e129846-bc89-4333-84e8-741632d31c31/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"4e129846-bc89-4333-84e8-741632d31c31",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "34f988f7-a583-4115-ac88-5f8e96668954",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Baerer"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  oldpassword:\"Updated\",\n  newpassword: \"Updated\",\n  confirmnewpassword:\"Updated\"\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/2abd15bb-0f78-42bd-9063-dfdf81a51186/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"2abd15bb-0f78-42bd-9063-dfdf81a51186",
+						"password"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

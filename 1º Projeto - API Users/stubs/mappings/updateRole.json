@@ -1,0 +1,25 @@
+{
+    "request": {
+     "method": "PUT",
+     "url": "/role/4e129846-bc89-4333-84e8-741632d31c31",
+     "headers" : {
+       "Authorization" : {
+         "contains" : "Baerer"
+       }
+     },
+     "bodyPatterns":[
+      {
+         "matchesJsonPath":"$.roleId",
+         "matchesJsonPath":"$.name"
+
+      }
+    ]
+
+   },
+ 
+   "response": {
+     "status": 200,
+     "bodyFileName": "updateRole.json"
+   }
+ }
+ 

@@ -1,0 +1,16 @@
+{
+    "request": {
+      "method": "GET",
+      "url": "/role/263f93c9-570b-4afa-b78b-bd5ff757e763/user",
+      "headers" : {
+        "Authorization" : {
+          "contains" : "Baerer"
+        }
+      }
+    },
+
+    "response": {
+      "status": 200,
+      "bodyFileName": "getusersbyRole.json"
+    }
+  }

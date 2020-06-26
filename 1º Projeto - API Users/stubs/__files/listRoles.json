@@ -1,0 +1,14 @@
+[
+    {
+      "roleId": "4e129846-bc89-4333-84e8-741632d31c31",
+      "name": "Administrator"
+    },
+    {
+      "roleId": "263f93c9-570b-4afa-b78b-bd5ff757e763",
+      "name": "Operator"
+    },
+    {
+        "roleId": "13ede395-1d6b-48cd-81bd-9af3ff702bc2",
+        "name": "Viewer"
+    }
+  ]
